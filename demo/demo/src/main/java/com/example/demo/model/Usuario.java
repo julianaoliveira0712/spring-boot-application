@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 
 @Entity
@@ -9,14 +11,18 @@ public class Usuario {
     @GeneratedValue
     private Long id;
 
+    @JsonProperty
     private  String nome;
+
+    @JsonProperty
     private Integer idade;
+
+
 
     public Usuario() {
     }
 
-    public Usuario(Long id, String name, Integer idade) {
-        this.id = id;
+    public Usuario( String name, Integer idade) {
         this.nome = name;
         this.idade = idade;
     }

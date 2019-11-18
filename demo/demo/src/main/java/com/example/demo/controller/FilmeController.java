@@ -34,7 +34,7 @@ public class FilmeController {
 
     @GetMapping("/filme/nome/{nome}")
     public ResponseEntity<List<Filme>> buscarFilmePorNome(@PathVariable("nome") String nomeFilme ) {
-        List<Filme> filmesNome= filmeInterface.findByGenero(nomeFilme);
+        List<Filme> filmesNome= filmeInterface.findByNome(nomeFilme);
         if(filmesNome.isEmpty()) {
             return ResponseEntity.noContent().build();
         }

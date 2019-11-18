@@ -1,0 +1,6 @@
+#FileLock
+#Mon Nov 18 09:58:13 BRT 2019
+hostName=CTNOSPODLCLKN.cateno.local
+id=16e7e9792006bf07057d3f32ea337896d18a464a340
+method=file
+server=10.10.14.90\:53083

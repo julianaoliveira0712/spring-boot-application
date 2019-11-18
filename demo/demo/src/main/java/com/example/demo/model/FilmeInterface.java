@@ -11,4 +11,7 @@ public interface FilmeInterface extends JpaRepository<Filme,Long> {
 
     @Query("select f from Filme f where f.genero = :genero")
     public List<Filme> findByGenero(@Param("genero") String genero);
+
+    @Query("select f from Filme f where f.nome = :nome")
+    public List<Filme> findByNome(@Param("nome") String genero);
 }

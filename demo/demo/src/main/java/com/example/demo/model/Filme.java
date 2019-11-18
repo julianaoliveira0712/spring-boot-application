@@ -1,22 +1,37 @@
 package com.example.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+//@Embeddable
 public class Filme {
 
     @GeneratedValue
     @Id
     private Long id;
 
-
+    @JsonProperty
     public String nome;
+
+    @JsonProperty
     public String data_lancamento;
+
+    @JsonProperty
     public String descricao;
+
+    @JsonProperty
     public String genero;
+
+    @JsonProperty
     public Integer quantidade;
+
+   @ManyToOne
+   @JoinColumn(name = "locadorafk")
+   private Locadora filmesfk;
+
 
     public Filme() {
     }
@@ -59,5 +74,9 @@ public class Filme {
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public Locadora getFilmesfk() {
+        return filmesfk;
     }
 }
