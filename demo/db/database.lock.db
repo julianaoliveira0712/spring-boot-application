@@ -1,0 +1,6 @@
+#FileLock
+#Sun Nov 17 20:46:02 BRST 2019
+hostName=192.168.0.6
+id=16e7b8b5cf887e94c0aa81a64566d94ebdf02510056
+method=file
+server=192.168.0.6\:49276
